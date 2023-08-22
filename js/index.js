@@ -1,6 +1,4 @@
 function toggleMenu() {
-    const navbarCollapse = document.getElementById("navbarCollapse");
-    const navbarToggler = document.querySelector(".navbar-toggler");
+    var navbarCollapse = document.getElementById("navbarCollapse");
     navbarCollapse.classList.toggle("active");
-    navbarToggler.classList.toggle("active");
-}
+  }
