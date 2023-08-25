@@ -459,25 +459,35 @@ footer {
 }
 
 .contenido-formulario {
-  width: 80%;
+  width: 85%;
   margin: auto;
   padding: 20px 30px;
-  background: #dde1e7;
+  background: #000000;
   border-radius: 10px;
-  box-shadow: -3px -3px 7px #ffffff73,
-               2px 2px 5px rgba(94,104,121,0.288);
 }
 
 .contenido-formulario .text {
   font-size: 33px;
   font-weight: 600;
   margin-bottom: 35px;
-  color: #595959;
+  color: #fff;
 }
+
+.form-control {
+  position: relative;
+  width:40%;
+  text-align: center;
+}
+
+.first-group {
+  margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
+}
+
 
 .field {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   position: relative;
   margin-top: 20px;
 }
@@ -486,122 +496,264 @@ footer {
   margin-top: 20px;
 }
 
-.field .input {
-  height: 50px;
-  width: 90%;
-  padding-left: 45px;
-  outline: none;
+/* Cambiar el color del placeholder en los campos de entrada */
+.input::placeholder,
+.textarea-alt::placeholder {
+    color: white;
+    opacity: 1; /* Asegura que el texto sea completamente visible */
+}
+
+.input {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: calc(100% - 10px); /* Subtracting margin and padding from the total width */
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
   border: none;
-  font-size: 18px;
-  background: #dde1e7;
-  color: #595959;
-  border-radius: 15px;
-  box-shadow: inset 2px 2px 5px #BABECC,
-              inset -5px -5px 10px #ffffff73;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-/* Estilos para el textarea */
-.textarea {
-  height: 100px;
-  width: 90%;
-  padding-left: 45px;
-  padding-top: 15px; /* Ajusta el espacio vertical en el textarea */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.input:focus {
   outline: none;
+}
+
+.input:focus + .input-border {
+  width: 50%;
+}
+
+.input-alt {
+  font-size: 1.2rem;
+  padding-inline: 1em;
+  padding-block: 0.8em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-border-alt {
+  height: 3px;
+  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input-alt:focus + .input-border-alt {
+  width: 100%;
+}
+
+.textarea-alt {
+  color: #fff;
+  font-size: 1.0rem;
+  width: 50%; /* Ajusta el ancho según tus preferencias */
+  height: 120px; /* Ajusta la altura según tus preferencias */
+  box-sizing: border-box;
+  padding: 0.7em;
   border: none;
-  font-size: 18px;
-  background: #dde1e7;
-  color: #595959;
-  border-radius: 15px;
-  box-shadow: inset 2px 2px 5px #BABECC,
-              inset -5px -5px 10px #ffffff73;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  background-color: transparent;
 }
 
-.textarea:focus {
-  box-shadow: inset 1px 1px 2px #BABECC,
-              inset -1px -1px 2px #ffffff73;
+.textarea-alt:focus {
+  outline: none;
 }
 
-.field .textarea:valid ~ .label {
-  opacity: 0;
+.textarea-alt:focus + .input-border-alt {
+  width: 100%;
 }
 
 
-.field .input:focus {
-  box-shadow: inset 1px 1px 2px #BABECC,
-              inset -1px -1px 2px #ffffff73;
-}
-
-.field .span {
-  position: absolute;
-  color: #595959;
-  width: 50px;
-  line-height: 55px;
-}
-
-.field .label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 45px;
-  pointer-events: none;
-  color: #666666;
-}
-
-.field .input:valid ~ label {
-  opacity: 0;
-}
 
 @media (max-width: 768px) {
   .field {
       flex-direction: column;
       align-items: flex-start;
+      position: relative;
   }
+
+  .form-control {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
 }
 
 
-.button {
-  margin: 15px 0;
-  width: 50%;
-  height: 50px;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 600;
-  background: #dde1e7;
-  border-radius: 25px;
-  border: none;
-  outline: none;
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-53 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
   cursor: pointer;
-  color: #595959;
-  box-shadow: 2px 2px 5px #BABECC,
-             -5px -5px 10px #ffffff73;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
 }
 
-.button:focus {
-  color: #3498db;
-  box-shadow: inset 2px 2px 5px #BABECC,
-             inset -5px -5px 10px #ffffff73;
+.btn-53:disabled {
+  cursor: default;
+}
+
+.btn-53:-moz-focusring {
+  outline: auto;
+}
+
+.btn-53 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+  display: none;
+}
+
+.btn-53 {
+  display: block;
+  margin: 15px auto; /* Ajusta los márgenes vertical y horizontal para el botón */
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-53 .original {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-53 .letters {
+  display: inline-flex;
+}
+
+.btn-53 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-53:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+  transition-delay: 0.5s;
 }
 
 
-/* Agrega estilos para el grupo de campos */
-.field-group {
+
+.social-links,.flex-center {
   display: flex;
-  margin-bottom: 20px;
-  justify-content: space-evenly;
-
+  justify-content: center;
+  align-items: center;
 }
 
-.field-group .field {
-  margin-right: 10px; /* Ajusta el margen derecho entre los campos */
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.9s;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .field-group {
-      flex-direction: column;
-  }
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
 
-  .field-group .field {
-    margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
-    margin-bottom: 10px; /* Agrega un margen inferior entre los campos apilados */
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
 }
+
+.social-btn:hover {
+  width: 15%;
+  border-radius: 5px;
 }
+
+.social-btn:hover span {
+  padding: 2px;
+  width: auto;
+}
+
+#twitter svg {
+  fill: #1da1f2;
+}
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github {
+  fill: #333;
+}
+
