@@ -203,106 +203,7 @@ nav li a:hover {
 }
 
 /* Estilos para pantallas pequeñas */
-/* Estilos para pantallas pequeñas */
-@media (max-width: 720px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(50%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
 
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas pequeñas */
-    margin: 5px;
-  }
-}
-
-/* Estilos para pantallas medianas y grandes */
-@media (min-width: 667px) and (max-width: 1019px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(35%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas medianas */
-    margin: 5px;
-  }
-}
-
-/* Estilos para pantallas muy grandes */
-@media (min-width: 1020px) and (max-width: 1280px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(40%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-@media (min-width: 1281px) and (max-width: 1540px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(25%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-@media (min-width: 1541px) and (max-width: 2000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(20%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-@media (min-width: 2001px) and (max-width: 3000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(30%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-@media (min-width: 3001px) and (max-width: 4000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(20%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
 
 .box {
   display: flex;
@@ -319,6 +220,7 @@ nav li a:hover {
   position: relative; /* Necesario para posicionar correctamente el contenido adicional */
   overflow: hidden;
 }
+
 
 .box .flip-container {
   position: absolute;
@@ -416,6 +318,8 @@ nav li a:hover {
   display: flex;
 }
 
+
+
 @media (max-width: 360px) {
   .box .tech-list li {
     margin-right: 1px; /* Ajusta el espaciado para pantallas pequeñas */
@@ -439,9 +343,576 @@ nav li a:hover {
 .skills {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-bottom: 8%; /* Agrega margen en la parte inferior */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  margin-bottom: 5%; /* Agrega margen en la parte inferior */
+  
 }
+
+.box.custom-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Agrega esta línea para centrar verticalmente */
+}
+
+
+.card {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Agrega esta línea para centrar verticalmente */
+  align-items: center; /* Agrega esta línea para centrar horizontalmente */
+}
+
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+  color: #000;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #000;
+}
+
+/*div de tecnologias*/
+
+.tec {
+  display: flex;
+justify-content: center;
+align-items: center; /* Centra verticalmente */
+
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+  border-radius: 10px;
+  color: #f5f5f6;
+  position: relative; /* Necesario para posicionar correctamente el contenido adicional */
+  overflow: hidden;
+  width: 95%;
+}
+
+.box2 h3 {
+  text-align: center;
+  margin-top: 0; /* Para eliminar el margen superior predeterminado del h3 */
+}
+
+.tecnologias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Varias imágenes por fila */
+  grid-gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Agrega margen en la parte inferior */
+  grid-row-gap: 15px; /* Espacio entre filas */
+
+}
+
+.info{
+  background-color: #313131;
+  color: #f5f5f6;
+  width: auto; /* Ajusta el ancho del contenedor */
+  height: auto;
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
+  border-radius: 5px;
+}
+
+
+.info:hover{
+box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+transform: translate(0px,5px);
+-webkit-transform: translate(0px,5px);
+-moz-transform:translate(0px,5px);
+}
+
+.box2 .tecnologias img {
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 720px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(50%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas pequeñas */
+    margin: 5px;
+  }
+
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    margin-bottom: 5%; /* Agrega margen en la parte inferior */
+    
+  }
+
+  .tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Varias imágenes por fila */
+    grid-gap: 15px;
+    margin-bottom: 10px; /* Agrega margen en la parte inferior */
+    grid-row-gap: 15px; /* Espacio entre filas */
+  
+  }
+
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agrega esta línea para centrar verticalmente */
+    align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    width: 90px;
+    font-size: 12px;
+    color: #000;
+  }
+  
+  .skill-level {
+    width: 120px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skill-percent {
+    background-color: #333;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #000;
+  }
+
+  .body p{
+    text-align: center;
+   font-size: 13px;
+  }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 667px) and (max-width: 1019px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(35%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas medianas */
+    margin: 5px;
+  }
+
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin-bottom: 5%; /* Agrega margen en la parte inferior */
+    
+  }
+
+  .tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Varias imágenes por fila */
+    grid-gap: 15px;
+    margin-bottom: 10px; /* Agrega margen en la parte inferior */
+    grid-row-gap: 15px; /* Espacio entre filas */
+  
+  }
+  .body {
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agrega esta línea para centrar verticalmente */
+    align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    width: 90px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .skill-level {
+    width: 120px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skill-percent {
+    background-color: #333;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .body p{
+   font-size: auto;
+  }
+}
+
+/* Estilos para pantallas muy grandes */
+@media (min-width: 1020px) and (max-width: 1280px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(40%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin-bottom: 5%; /* Agrega margen en la parte inferior */
+    
+  }
+
+  .tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Varias imágenes por fila */
+    grid-gap: 15px;
+    margin-bottom: 10px; /* Agrega margen en la parte inferior */
+    grid-row-gap: 15px; /* Espacio entre filas */
+  
+  }
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agrega esta línea para centrar verticalmente */
+    align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    width: 90px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .skill-level {
+    width: 120px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skill-percent {
+    background-color: #333;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .body p{
+   font-size: 20px;
+  }
+}
+
+
+
+@media (min-width: 1281px) and (max-width: 1540px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(25%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1541px) and (max-width: 2000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(20%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-bottom: 5%; /* Agrega margen en la parte inferior */
+    
+  }
+
+  .tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Varias imágenes por fila */
+    grid-gap: 15px;
+    margin-bottom: 10px; /* Agrega margen en la parte inferior */
+    grid-row-gap: 15px; /* Espacio entre filas */
+  
+  }
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agrega esta línea para centrar verticalmente */
+    align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    width: 90px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .skill-level {
+    width: 120px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skill-percent {
+    background-color: #333;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .body p{
+   font-size: 20px;
+  }
+
+}
+
+@media (min-width: 2001px) and (max-width: 3000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(30%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    margin-bottom: 5%; /* Agrega margen en la parte inferior */
+    
+  }
+
+  .tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Varias imágenes por fila */
+    grid-gap: 15px;
+    margin-bottom: 10px; /* Agrega margen en la parte inferior */
+    grid-row-gap: 15px; /* Espacio entre filas */
+  
+  }
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agrega esta línea para centrar verticalmente */
+    align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  .skill-name {
+    width: 100px;
+    font-size: 20px;
+    color: #000;
+  }
+  
+  .skill-level {
+    width: 120px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 25px;
+  }
+  
+  .skill-percent {
+    background-color: #333;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #000;
+  }
+
+  .body p{
+   font-size: 25px;
+  }
+
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .tech-list img {
+    width: auto;
+    height: auto;
+  }
+}
+
+
+
+@media (min-width: 3001px) and (max-width: 4000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(20%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+
+
+
+
+
+            
 
 /*Contacto*/
 
@@ -564,6 +1035,34 @@ footer {
 .textarea-alt:focus + .input-border-alt {
   width: 100%;
 }
+.textarea-container {
+    position: relative;
+    width: 100%;
+}
+
+.textarea-container textarea {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.textarea-container .input-border-alt {
+    position: absolute;
+    background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.textarea-container textarea:focus + .input-border-alt {
+    width: 100%;
+}
 
 @media (max-width: 768px) {
   .field {
@@ -577,6 +1076,12 @@ footer {
     width: 100%;
     text-align: center;
   }
+  .flip-content p {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #fff;
+}
 }
 
 .btn-53,
