@@ -1,6 +1,6 @@
 body {
   margin: auto 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #191919;
 font-family: 'Roboto Slab', serif;
 }
 
@@ -24,6 +24,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 
 nav li {
@@ -34,7 +35,7 @@ nav li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 16px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
 }
@@ -54,7 +55,7 @@ nav li a:hover {
     cursor: pointer;
   }
 
-  nav .navbar-toggler-icon {
+  .navbar-toggler-icon {
     display: block;
     width: 20px;
     height: 3px;
@@ -63,40 +64,40 @@ nav li a:hover {
     transition: all 0.2s;
   }
 
-  nav .navbar-toggler.active .navbar-toggler-icon:nth-child(1) {
+  .navbar-toggler.active .navbar-toggler-icon:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
   }
 
-  nav .navbar-toggler.active .navbar-toggler-icon:nth-child(2) {
+  .navbar-toggler.active .navbar-toggler-icon:nth-child(2) {
     opacity: 0;
   }
 
-  nav .navbar-toggler.active .navbar-toggler-icon:nth-child(3) {
+  .navbar-toggler.active .navbar-toggler-icon:nth-child(3) {
     transform: rotate(-45deg) translate(4px, -4px);
   }
 
-  nav .navbar-toggler.active {
+  .navbar-toggler.active {
     background-color: rgba(0, 0, 0, 0.9);
   }
 
-  nav .navbar-toggler:not(.active) .navbar-toggler-icon {
+  .navbar-toggler:not(.active) .navbar-toggler-icon {
     transform: none;
   }
 
-  nav .navbar-collapse {
+  .navbar-collapse {
     display: none;
     clear: both;
   }
 
-  nav .navbar-collapse.active {
+  .navbar-collapse.active {
     display: block;
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   nav ul {
     flex-direction: column;
     position: absolute;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1;
   }
 
@@ -453,6 +454,154 @@ nav li a:hover {
 
 footer {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.9);
-  height: 10vh;
+  background-color: #191919;
+  height: auto;
+}
+
+.contenido-formulario {
+  width: 80%;
+  margin: auto;
+  padding: 20px 30px;
+  background: #dde1e7;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73,
+               2px 2px 5px rgba(94,104,121,0.288);
+}
+
+.contenido-formulario .text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #595959;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.field:nth-child(2) {
+  margin-top: 20px;
+}
+
+.field .input {
+  height: 50px;
+  width: 90%;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #dde1e7;
+  color: #595959;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 5px #BABECC,
+              inset -5px -5px 10px #ffffff73;
+}
+
+/* Estilos para el textarea */
+.textarea {
+  height: 100px;
+  width: 90%;
+  padding-left: 45px;
+  padding-top: 15px; /* Ajusta el espacio vertical en el textarea */
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #dde1e7;
+  color: #595959;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 5px #BABECC,
+              inset -5px -5px 10px #ffffff73;
+}
+
+.textarea:focus {
+  box-shadow: inset 1px 1px 2px #BABECC,
+              inset -1px -1px 2px #ffffff73;
+}
+
+.field .textarea:valid ~ .label {
+  opacity: 0;
+}
+
+
+.field .input:focus {
+  box-shadow: inset 1px 1px 2px #BABECC,
+              inset -1px -1px 2px #ffffff73;
+}
+
+.field .span {
+  position: absolute;
+  color: #595959;
+  width: 50px;
+  line-height: 55px;
+}
+
+.field .label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  pointer-events: none;
+  color: #666666;
+}
+
+.field .input:valid ~ label {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .field {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+
+.button {
+  margin: 15px 0;
+  width: 50%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  background: #dde1e7;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #595959;
+  box-shadow: 2px 2px 5px #BABECC,
+             -5px -5px 10px #ffffff73;
+}
+
+.button:focus {
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #BABECC,
+             inset -5px -5px 10px #ffffff73;
+}
+
+
+/* Agrega estilos para el grupo de campos */
+.field-group {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+
+}
+
+.field-group .field {
+  margin-right: 10px; /* Ajusta el margen derecho entre los campos */
+}
+
+@media (max-width: 768px) {
+  .field-group {
+      flex-direction: column;
+  }
+
+  .field-group .field {
+    margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
+    margin-bottom: 10px; /* Agrega un margen inferior entre los campos apilados */
+}
 }
