@@ -348,7 +348,7 @@ nav li a:hover {
 .skill {
   display: flex;
   align-items: center;
-  margin-bottom: 100%; /* Agrega margen en la parte inferior */
+  margin-bottom: 10px; /* Agrega margen en la parte inferior */
   
 }
 
