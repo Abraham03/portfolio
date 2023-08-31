@@ -4,6 +4,11 @@ body {
   font-family: "Roboto Slab", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 nav.main-nav {
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
@@ -120,13 +125,13 @@ nav li a:hover {
   background-image: url("../img/cover5.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: center center;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white; /* Color del texto u otros elementos dentro de la portada */
   text-align: center; /* Alineación del texto */
-  margin-bottom: 8%; /* Agrega margen en la parte inferior */
+  margin-bottom: 5%; /* Agrega margen en la parte inferior */
 }
 
 /*Elemento rotante*/
@@ -340,6 +345,13 @@ nav li a:hover {
 }
 
 /*skills*/
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100%; /* Agrega margen en la parte inferior */
+  
+}
+
 .skills {
   display: grid;
   grid-gap: 10px;
@@ -381,11 +393,7 @@ nav li a:hover {
 }
 
 
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+
 
 .skill-name {
   width: 120px;
