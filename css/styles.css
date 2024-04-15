@@ -1,13 +1,8 @@
 body {
   margin: auto 0;
   background-color: #191919;
-  font-family: "Roboto Slab", serif;
+font-family: 'Roboto Slab', serif;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
 
 nav.main-nav {
   background-color: rgba(0, 0, 0, 0.9);
@@ -29,6 +24,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 
 nav li {
@@ -120,18 +116,21 @@ nav li a:hover {
   }
 }
 
+
+
+
 /*cover*/
 .container {
   background-image: url("../img/cover5.jpg");
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: center center;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white; /* Color del texto u otros elementos dentro de la portada */
   text-align: center; /* Alineación del texto */
-  margin-bottom: 5%; /* Agrega margen en la parte inferior */
+  margin-bottom: 8%; /* Agrega margen en la parte inferior */
 }
 
 /*Elemento rotante*/
@@ -147,7 +146,7 @@ nav li a:hover {
 
 .svg-frame svg {
   position: absolute;
-  transition: 0.5s;
+  transition: .5s;
   z-index: calc(1 - (0.2 * var(--j)));
   transform-origin: center;
   width: 344px;
@@ -156,12 +155,11 @@ nav li a:hover {
 }
 
 .svg-frame:hover svg {
-  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i)))
-    translateY(calc(-35px * var(--i)));
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
 }
 
 .svg-frame svg #center {
-  transition: 0.5s;
+  transition: .5s;
   transform-origin: center;
 }
 
@@ -198,16 +196,118 @@ nav li a:hover {
   }
 }
 
+
 /*grid*/
 
 .wrapper {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-bottom: 8%; /* Agrega margen en la parte inferior */
+  margin-bottom: 8%; /* Agrega margen en la parte inferior */ 
 }
 
 /* Estilos para pantallas pequeñas */
+/* Estilos para pantallas pequeñas */
+@media (max-width: 720px) {
+  
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(50%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas pequeñas */
+    margin: 5px;
+  }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 667px) and (max-width: 1019px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(35%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas medianas */
+    margin: 5px;
+  }
+}
+
+/* Estilos para pantallas muy grandes */
+@media (min-width: 1020px) and (max-width: 1280px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(40%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1540px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(25%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1541px) and (max-width: 2000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(20%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 2001px) and (max-width: 3000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(30%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 3001px) and (max-width: 4000px) {
+  .wrapper {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(20%, 1fr)
+    ); /* Ajusta el tamaño de las columnas */
+  }
+
+  .box {
+    padding: 5px; /* Reduce el relleno en pantallas grandes */
+    margin: 5px;
+  }
+}
 
 
 .box {
@@ -225,7 +325,6 @@ nav li a:hover {
   position: relative; /* Necesario para posicionar correctamente el contenido adicional */
   overflow: hidden;
 }
-
 
 .box .flip-container {
   position: absolute;
@@ -282,20 +381,20 @@ nav li a:hover {
   flex-direction: column;
   align-items: flex-start;
 }
-
-.box {
-  transition: 0.5s, color 0.1s;
-  -webkit-transition: 0.5s, color 0.1s;
-  -moz-transition: 0.5s, color 0.1s;
+              
+.box{
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
 }
-.box:hover {
-  box-shadow: 0 8px 8px 0 #000000, 0 8px 8px 0 #000000;
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  -moz-transform: translate(0px, 5px);
+.box:hover{
+  box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  -moz-transform:translate(0px,5px);
 }
-
-.tech {
+  
+.tech{
   display: flex;
   overflow: auto;
 }
@@ -314,6 +413,7 @@ nav li a:hover {
   align-items: flex-start;
 }
 
+
 .box .tech-list li {
   background-color: lightblue; /* Cambia este color según tus preferencias */
   padding: 5px;
@@ -323,11 +423,9 @@ nav li a:hover {
   display: flex;
 }
 
-
-
 @media (max-width: 360px) {
   .box .tech-list li {
-    margin-right: 1px; /* Ajusta el espaciado para pantallas pequeñas */
+      margin-right: 1px; /* Ajusta el espaciado para pantallas pequeñas */
   }
   .box .tech-list li {
     background-color: lightblue; /* Cambia este color según tus preferencias */
@@ -336,596 +434,48 @@ nav li a:hover {
     margin-top: 0;
     display: flex;
   }
+
+
 }
 
 @media (min-width: 667px) and (max-width: 1006px) {
   .box .tech-list li {
-    margin-right: 7px; /* Ajusta el espaciado para pantallas pequeñas */
-  }
-}
-
-/*skills*/
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px; /* Agrega margen en la parte inferior */
-  
-}
-
-.skills {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  margin-bottom: 5%; /* Agrega margen en la parte inferior */
-  
-}
-
-.box.custom-box {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Agrega esta línea para centrar verticalmente */
-}
-
-
-.card {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Agrega esta línea para centrar verticalmente */
-  align-items: center; /* Agrega esta línea para centrar horizontalmente */
-}
-
-
-
-
-.skill-name {
-  width: 120px;
-  font-size: 16px;
-  color: #000;
-}
-
-.skill-level {
-  width: 160px;
-  height: 10px;
-  background-color: #eee;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-left: 20px;
-}
-
-.skill-percent {
-  background-color: #333;
-  height: 100%;
-}
-
-.skill-percent-number {
-  margin-left: 20px;
-  font-size: 16px;
-  color: #000;
-}
-
-/*div de tecnologias*/
-
-.tec {
-  display: flex;
-justify-content: center;
-align-items: center; /* Centra verticalmente */
-
-}
-
-
-.tecnologias {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Varias imágenes por fila */
-  grid-gap: 15px;
-  grid-row-gap: 15px; /* Espacio entre filas */
-  margin: 10px;
-
-}
-
-.info{
-  background-color: #313131;
-  color: #f5f5f6;
-  width: auto; /* Ajusta el ancho del contenedor */
-  height: auto;
-  transition: .5s, color .10s;
-  -webkit-transition: .5s, color .10s;
-  -moz-transition: .5s, color .10s;
-  border-radius: 5px;
-}
-
-
-.info:hover{
-box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
-transform: translate(0px,5px);
--webkit-transform: translate(0px,5px);
--moz-transform:translate(0px,5px);
-}
-
-.tecnologias img {
-  border-radius: 5px;
-}
-
-
-
-
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 720px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(50%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas pequeñas */
-    margin: 5px;
-  }
-
-  .skills {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    margin-bottom: 5%; /* Agrega margen en la parte inferior */
-    
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */  
-  }
-
-  .body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agrega esta línea para centrar verticalmente */
-    align-items: center; /* Agrega esta línea para centrar horizontalmente */
-  }
-  
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-name {
-    width: 90px;
-    font-size: 12px;
-    color: #000;
-  }
-  
-  .skill-level {
-    width: 120px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 12px;
-    color: #000;
-  }
-
-  .body p{
-    text-align: center;
-   font-size: 13px;
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */
-    grid-row-gap: 15px; /* Espacio entre filas */
-  
-  }
-}
-
-/* Estilos para pantallas medianas y grandes */
-@media (min-width: 667px) and (max-width: 1019px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(35%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas medianas */
-    margin: 5px;
-  }
-
-  .skills {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    margin-bottom: 5%; /* Agrega margen en la parte inferior */
-    
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */
-    grid-row-gap: 15px; /* Espacio entre filas */
-  
-  }
-  .body {
-    height: fit-content;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agrega esta línea para centrar verticalmente */
-    align-items: center; /* Agrega esta línea para centrar horizontalmente */
-  }
-  
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-name {
-    width: 90px;
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .skill-level {
-    width: 120px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #000;
-  }
-
-  .body p{
-   font-size: auto;
-  }
-}
-
-/* Estilos para pantallas muy grandes */
-@media (min-width: 1020px) and (max-width: 1280px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(40%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-
-  .skills {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    margin-bottom: 5%; /* Agrega margen en la parte inferior */
-    
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */
-    grid-row-gap: 15px; /* Espacio entre filas */
-  
-  }
-  .body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agrega esta línea para centrar verticalmente */
-    align-items: center; /* Agrega esta línea para centrar horizontalmente */
-  }
-  
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-name {
-    width: 90px;
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .skill-level {
-    width: 120px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #000;
-  }
-
-  .body p{
-   font-size: 20px;
+      margin-right: 7px; /* Ajusta el espaciado para pantallas pequeñas */
   }
 }
 
 
-
-@media (min-width: 1281px) and (max-width: 1540px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(30%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-@media (min-width: 1541px) and (max-width: 2000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(20%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-
-  .skills {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    margin-bottom: 5%; /* Agrega margen en la parte inferior */
-    
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */
-    grid-row-gap: 15px; /* Espacio entre filas */
-  
-  }
-  .body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agrega esta línea para centrar verticalmente */
-    align-items: center; /* Agrega esta línea para centrar horizontalmente */
-  }
-  
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-name {
-    width: 90px;
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .skill-level {
-    width: 120px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #000;
-  }
-
-  .body p{
-   font-size: 20px;
-  }
-
-}
-
-@media (min-width: 2001px) and (max-width: 3000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(30%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-
-  .skills {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-    margin-bottom: 5%; /* Agrega margen en la parte inferior */
-    
-  }
-
-  .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Varias imágenes por fila */
-    grid-gap: 15px;
-    margin-bottom: 10px; /* Agrega margen en la parte inferior */
-    grid-row-gap: 15px; /* Espacio entre filas */
-  
-  }
-  .body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agrega esta línea para centrar verticalmente */
-    align-items: center; /* Agrega esta línea para centrar horizontalmente */
-  }
-  
-  .skill-name {
-    width: 100px;
-    font-size: 20px;
-    color: #000;
-  }
-  
-  .skill-level {
-    width: 120px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 25px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 20px;
-    color: #000;
-  }
-
-  .body p{
-   font-size: 25px;
-  }
-
-  .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-  }
-
-  .tech-list img {
-    width: auto;
-    height: auto;
-  }
-}
-
-
-
-@media (min-width: 3001px) and (max-width: 4000px) {
-  .wrapper {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(20%, 1fr)
-    ); /* Ajusta el tamaño de las columnas */
-  }
-
-  .box {
-    padding: 5px; /* Reduce el relleno en pantallas grandes */
-    margin: 5px;
-  }
-}
-
-
-
-
-
-
-            
+/*boton*/
 
 /*Contacto*/
 
+
+
+
 footer {
   text-align: center;
-  background-color: #000000;
-  height: 50vh;
-  width: 100%;
+  background-color: #191919;
+  height: auto;
 }
 
 .contenido-formulario {
-  width: 50%;
+  width: 85%;
   margin: auto;
   padding: 20px 30px;
+  background: #000000;
+  border-radius: 10px;
 }
 
 .contenido-formulario .text {
   font-size: 33px;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 35px;
   color: #fff;
 }
 
 .form-control {
   position: relative;
-  width: 40%;
+  width:40%;
   text-align: center;
 }
 
@@ -933,10 +483,11 @@ footer {
   margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
 }
 
+
 .field {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   position: relative;
   margin-top: 20px;
 }
@@ -948,17 +499,15 @@ footer {
 /* Cambiar el color del placeholder en los campos de entrada */
 .input::placeholder,
 .textarea-alt::placeholder {
-  color: white;
-  opacity: 1; /* Asegura que el texto sea completamente visible */
+    color: white;
+    opacity: 1; /* Asegura que el texto sea completamente visible */
 }
 
 .input {
   color: #fff;
   font-size: 0.9rem;
   background-color: transparent;
-  width: calc(
-    100% - 10px
-  ); /* Subtracting margin and padding from the total width */
+  width: calc(100% - 10px); /* Subtracting margin and padding from the total width */
   box-sizing: border-box;
   padding-inline: 0.5em;
   padding-block: 0.7em;
@@ -994,8 +543,8 @@ footer {
 
 .input-border-alt {
   height: 3px;
-  background: linear-gradient(90deg, #ff6464 0%, #ffbf59 50%, #47c9ff 100%);
-  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
 }
 
 .input-alt:focus + .input-border-alt {
@@ -1004,8 +553,8 @@ footer {
 
 .textarea-alt {
   color: #fff;
-  font-size: 1rem;
-  width: 100%; /* Ajusta el ancho según tus preferencias */
+  font-size: 1.0rem;
+  width: 50%; /* Ajusta el ancho según tus preferencias */
   height: 120px; /* Ajusta la altura según tus preferencias */
   box-sizing: border-box;
   padding: 0.7em;
@@ -1022,54 +571,23 @@ footer {
 .textarea-alt:focus + .input-border-alt {
   width: 100%;
 }
-.textarea-container {
-    position: relative;
-    width: 100%;
-}
 
-.textarea-container textarea {
-    width: 100%;
-    resize: none;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-}
 
-.textarea-container .input-border-alt {
-    position: absolute;
-    background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
-    width: 0%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
-}
-
-.textarea-container textarea:focus + .input-border-alt {
-    width: 100%;
-}
 
 @media (max-width: 768px) {
   .field {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
   }
 
   .form-control {
-    position: relative;
-    width: 100%;
-    text-align: center;
-  }
-  .flip-content p {
-  font-size: 15px;
-  font-weight: 800;
-  margin-bottom: 35px;
-  color: #fff;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 }
+
 
 .btn-53,
 .btn-53 *,
@@ -1163,7 +681,7 @@ footer {
 }
 
 .btn-53:hover span:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.1s;
 }
 
 .btn-53:hover span:nth-child(3) {
@@ -1182,8 +700,9 @@ footer {
   transition-delay: 0.5s;
 }
 
-.social-links,
-.flex-center {
+
+
+.social-links,.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1193,15 +712,13 @@ footer {
   cursor: pointer;
   height: 50px;
   width: 50px;
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   background: white;
   margin: 5px;
-  transition: 0.5s, color 0.1s;
-  -webkit-transition: 0.5s, color 0.1s;
-  -moz-transition: 0.5s, color 0.1s;
+  transition: 0.9s;
   justify-content: center;
 }
 
@@ -1210,11 +727,22 @@ footer {
   width: 24px;
 }
 
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
 .social-btn:hover {
-  box-shadow: 0 8px 8px 0 #000000, 0 8px 8px 0 #000000;
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  -moz-transform: translate(0px, 5px);
+  width: 15%;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: auto;
 }
 
 #twitter svg {
@@ -1229,6 +757,3 @@ footer {
   fill: #333;
 }
 
-.social-links a {
-  text-decoration: none;
-}

@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="container" id="container">
+    <div class="container">
         <nav class="main-nav">
             <button class="navbar-toggler" onclick="toggleMenu()">
                 <span class="navbar-toggler-icon"></span>
@@ -23,11 +23,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <ul class="navbar-collapse" id="navbarCollapse">
-                <li><a href="#container" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#Experiencia">Experiencia</a></li>
-                <li><a href="#Habilidades">Habilidades</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" onclick="scrollToSection('services')">Servicios</a></li>
+                <li><a href="#" onclick="scrollToSection('contact')">Contacto</a></li>
             </ul>
         </nav>
         <div class="svg-frame">
@@ -113,19 +111,21 @@
         </div>
 
     </div>
-    <div id="Experiencia" class="experiencia" style="text-align: center;">
-        <h1 style="color: white;">Experiencia</h1>
+    <div class="about" id="services" style="text-align: center;">
+        <h3 style="color: white;">Conectando tus ideas al mundo digital: desarrollamos software, creamos experiencias web, automatizamos tus procesos y realizamos instalación de paneles solares.</h3>
     </div>
-    <div class="wrapper">
+    <div class="experiencia"  style="text-align: center;">
+        <h1 style="color: white;">Servicios</h1>
+    </div>
+    <div class="wrapper" >
         <div class="box">
             <img src="./img/grid9.png" alt=""> <!-- Imagen aquí -->
             <div class="flip-container">
                 <div class="flip-content back">
-                    <p>Diseñé un sistema integral para gestionar datos ciudadanos y administrativos. Permite agregar, modificar y eliminar información clave, abarcando desde el registro y seguimiento de ciudadanos hasta la administración de documentos, multas y cargos.</p>
+                    <p>Software de Automatización de Procesos: Desarrollo de software para automatizar tareas y procesos empresariales, como flujo de trabajo, procesamiento de datos y generación de informes.</p>
                     <h4>Tecnologias:</h4>
                     <ul class="tech-list">
                         <li><img src="./img/technology/java.png" alt=""></li>
-                        <li><img src="./img/technology/javascript.png" alt=""></li>
                         <li><img src="./img/technology/springboot.png" alt=""></li>
                         <li><img src="./img/technology/springSecurity.png" alt=""></li>
                         <li><img src="./img/technology/maven.png" alt=""></li>
@@ -134,251 +134,71 @@
                 </div>
             </div>
             <div class="content">
-                <h4>Freelancer</h4>
-            </div>
-        </div>
-        <div class="box">
-            <img src="./img/grid8.png" alt=""> <!-- Imagen aquí -->
-            <div class="flip-container">
-                <div class="flip-content back">
-                    <ul>
-                        <li>Modificar servicios desarrollados en JavaSQL.</li>
-                        <li>Creación de Test suite y Test case en SOAPUI.</li>
-                        <li>Creación de manual de Usuario y Técnico.</li>
-                        <li>Asistir a reuniones de clientes para obtener nuevos requerimientos.</li>
-                    </ul>
-                    <h4>Tecnologias:</h4>
-                    <ul class="tech-list">
-                        <li><img src="./img/technology/java.png" alt=""></li>
-                        <li><img src="./img/technology/postman.png" alt=""></li>
-                        <li><img src="./img/technology/SoapUI.png" alt=""></li>
-                        <li><img src="./img/technology/oracle.png" alt=""></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="content">
-                <h4>IBM México.</h4>
+                <h4>Desarrollo de Software Personalizado</h4>
             </div>
         </div>
         <div class="box">
             <img src="./img/grid10.png" alt=""> <!-- Imagen aquí -->
             <div class="flip-container">
                 <div class="flip-content back">
-                    <ul>
-                        <li>Mantenimiento e implementación de nuevos requerimientos utilizando Java, PHP y Javascript.
-                        </li>
-                        <li>SVN, Git, GitLab para el control de versiones y gestion de proyectos.</li>
-                    </ul>
-                    <h4>Tecnologias:</h4>
-                    <ul class="tech-list">
-                        <li><img src="./img/technology/java.png" alt=""></li>
-                        <li><img src="./img/technology/springboot.png" alt=""></li>
-                        <li><img src="./img/technology/svn.png" alt=""></li>
-                        <li><img src="./img/technology/linux.png" alt=""></li>
-                        <li><img src="./img/technology/git.png" alt=""></li>
-                        <li><img src="./img/technology/gitlab.png" alt=""></li>
-                    </ul>
+                    <p>
+                        Diseño Web Responsivo: Creación de sitios web adaptables a diferentes dispositivos y tamaños de pantalla.
+                        </p>
+                        <p>Desarrollo de Sitios Web Estáticos y Dinámicos: Creación de sitios web estáticos con HTML, CSS y JavaScript, así como sitios web dinámicos con tecnologías de servidor como PHP o Java</p>
                 </div>
             </div>
             <div class="content">
-                <h4>Praxis México.</h4>
+                <h4>Diseño y Desarrollo de Páginas Web.</h4>
             </div>
         </div>
         <div class="box">
-            <img src="./img/grid11.png" alt=""> <!-- Imagen aquí -->
+            <img src="./img/plc.jpeg" alt=""> <!-- Imagen aquí -->
             <div class="flip-container">
                 <div class="flip-content back">
-                    <ul>
-                        <li>Desarrollo de aplicaciones web para la gestion de becas hacia los estudiantes.</li>
-                        <li>Mantenimiento de aplicaciones PHP de la institución.</li>
-                    </ul>
-                    <h4>Tecnologias:</h4>
-                    <ul class="tech-list">
-                        <li><img src="./img/technology/php.png" alt=""></li>
-                        <li><img src="./img/technology/javascript.png" alt=""></li>
-                        <li><img src="./img/technology/css.png" alt=""></li>
-                        <li><img src="./img/technology/bootstrap.png" alt=""></li>
-                        <li><img src="./img/technology/mysql.png" alt=""></li>
-                    </ul>
+                    <p>Nuestro servicio de automatización de procesos está diseñado para mejorar la eficiencia en su empresa al eliminar tareas repetitivas y manuales.</p>
+                    <p>Con tecnologías avanzadas como PLCs y sensores inteligentes, creamos soluciones innovadoras que aumentan la productividad y reducen errores, lo que se traduce en una operación más eficiente y rentable para su negocio.</p>
+
                 </div>
             </div>
             <div class="content">
-                <h4>Universidad Politecnica de Francisco I. Madero.</h4>
+                <h4>Automatización de procesos.</h4>
             </div>
         </div>
         <div class="box">
-            <img src="./img/grid1.jpg" alt=""> <!-- Imagen aquí -->
+            <img src="./img/solar panel.jpg" alt=""> <!-- Imagen aquí -->
             <div class="flip-container">
                 <div class="flip-content back">
-                    <ul>
-                        <li>Documentación de proyectos con el modelo CMMI Nivel 2.</li>
-                        <li>Creación de diagramas UML, Manual de usuario y Manual técnico.</li>
-                        <li>Modificación de aplicaciones en PHP, JavaScript y HTML5.</li>
-                    </ul>
-                    <h4>Tecnologias:</h4>
-                    <ul class="tech-list">
-                        <li><img src="./img/technology/php.png" alt=""></li>
-                        <li><img src="./img/technology/javascript.png" alt=""></li>
-                        <li><img src="./img/technology/css.png" alt=""></li>
-                        <li><img src="./img/technology/bootstrap.png" alt=""></li>
-                    </ul>
+                    <p>Nuestros proyectos de instalación de paneles solares ofrecen una fuente de energía limpia y rentable para su hogar o negocio. Trabajamos con usted para diseñar e instalar sistemas solares personalizados utilizando tecnología de vanguardia y equipos de alta calidad.</p>
                 </div>
             </div>
             <div class="content">
-                <h4>Solser Information Technology.</h4>
+                <h4>Instalación de paneles solares.</h4>
             </div>
         </div>
 
     </div>
-    <div id="Habilidades" class="skills">
-        <div class="box">
-            <div class="header">Tecnologias</div>
-            <div class="tecnologias">
-                <div class="info">
-                    <img src="./img/technology/java.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/javascript.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/php.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/sql.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/mysql.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/springboot.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/springSecurity.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/apache.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/html.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/jquery.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/json.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/xml.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/bootstrap.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/css.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/docker.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/github.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/maven.svg" alt="">
-                </div>
-                <div class="info">
-                    <img src="./img/technology/linux.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="box custom-box">
-            <div class="card">
-                <div class="header">Habilidades</div>
-                <div class="body">
-                    <div class="skill">
-                        <div class="skill-name">JAVA</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 75%"></div>
-                        </div>
-                        <div class="skill-percent-number">75%</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">PHP</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 60%"></div>
-                        </div>
-                        <div class="skill-percent-number">60%</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">JavaScript</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 70%"></div>
-                        </div>
-                        <div class="skill-percent-number">70%</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">HTML</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 90%"></div>
-                        </div>
-                        <div class="skill-percent-number">90%</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">CSS</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 60%"></div>
-                        </div>
-                        <div class="skill-percent-number">60%</div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <div class="box custom-box">
-            <div class="card">
-                <div class="header">Formacion Academica</div>
-                <div class="body">
-                    <p style="color: black;">Universidad Tecnologica del Valle del Mezquital</p>
-                    <div class="skill">
-                        <div class="skill-name">Ingles</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 85%"></div>
-                        </div>
-                        <div class="skill-percent-number">85%</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Español</div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 99%"></div>
-                        </div>
-                        <div class="skill-percent-number">99%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer>
 
-    <footer id="Contacto">
-        <div class="contenido-formulario">
+        <div class="contenido-formulario" id="contact">
             <div class="text">
                 Contactame
             </div>
-            <form action="#">
+            <form id="contactForm">
                 <div class="field first-group">
                     <div class="form-control">
-                        <input class="input input-alt" placeholder="Nombre" required="" type="text">
+                        <input class="input input-alt" placeholder="Nombre" id="nombre" required="" type="text">
                         <span class="input-border input-border-alt"></span>
                     </div>
                     <div class="form-control">
-                        <input class="input input-alt" placeholder="Apellidos" required="" type="text">
+                        <input class="input input-alt" placeholder="Apellidos" id="apellidos" required="" type="text">
                         <span class="input-border input-border-alt"></span>
                     </div>
                 </div>
-                <div class="textarea-container">
-                    <textarea class="input input-alt input textarea-alt" placeholder="Escriba su mensaje"
-                        required=""></textarea>
-                    <span class="input-border input-border-alt"></span>
-                </div>
-                <button class="btn-53">
+                <textarea class="input input-alt input textarea-alt" id="mensaje" placeholder="Escriba su mensaje"
+                    required=""></textarea>
+                <span class="input-border input-border-alt"></span>
+                <button type="submit" class="btn-53">
                     <div class="original">ENVIAR</div>
                     <div class="letters">
 
@@ -392,25 +212,26 @@
                 </button>
             </form>
             <div class="social-links">
-                <a href="https://www.facebook.com/abraham.chavez.583" id="twitter" class="social-btn flex-center">
+                <div id="twitter" class="social-btn flex-center">
                     <img src="./img/social/facebook.svg" alt="Facebook" height="24" width="24">
-                </a>
+                    <span>abraham.chavez.583</span>
+                </div>
 
-                <a href="https://www.linkedin.com/in/abraham03/" id="linkedin" class="social-btn flex-center">
+                <div id="linkedin" class="social-btn flex-center">
                     <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z">
                         </path>
-                    </svg>
-                </a>
+                    </svg><span>abraham03</span>
+                </div>
 
-                <a href="https://github.com/Abraham03" id="github" class="social-btn flex-center">
+                <div id="github" class="social-btn flex-center">
                     <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
                         </path>
-                    </svg>
-                </a>
+                    </svg><span>Abraham03</span>
+                </div>
             </div>
         </div>
 
